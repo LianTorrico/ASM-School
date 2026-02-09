@@ -6,3 +6,6 @@
   2. StackOutput
        > This code gets 4 chars as input and returns them from the last to first
        > > Contains PUSH, POP, INPUT, OUTPUT.
+  3. Test Simulation
+      > This code contains the simulation of a future test.
+      > > Contains INPUT, OUTPUT, ARRAY, OFFSET, CMP, JMP, JE, JGE, SUB, ADD and more
