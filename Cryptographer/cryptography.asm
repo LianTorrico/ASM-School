@@ -3,12 +3,8 @@
 .DATA
 
 BUFFER db ?,?,?,?,?,?,?,"$"
-messaggio db 0AH,0DH,"CODICE PULITO: ","$"
 .CODE
-.STARTUP  ;La prego di non chiedermi di controllarlo
-          ;In quanto a me stesso risulta illeggibile e confusorio
-          ;Pero funziona
-
+.STARTUP
 MOV CX, 6
 MOV SI, 0
 input1:    
