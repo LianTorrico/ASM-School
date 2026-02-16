@@ -2,7 +2,7 @@
 .STACK 100H
 .DATA
 
-stringavuota db "","","","","","","","$"
+stringavuota db ?,?,?,?,?,?,?,"$"
 messaggio db 0AH,0DH,"CODICE PULITO: ","$"
 .CODE
 .STARTUP  ;La prego di non chiedermi di controllarlo
@@ -29,7 +29,7 @@ INC SI
 jmp ritornoloop
         
          
-
+                                                                                      
 inizio1:
 MOV BL, 61H
 CMP AL, BL
@@ -45,7 +45,7 @@ conversione1:
 MOV BL, 7Ah
 CMP AL, BL
 JGE inizio2
-SUB AL, 32H
+SUB AL, 20H
 ADD stringavuota[SI], AL
 INC SI
 jmp ritornoloop
