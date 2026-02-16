@@ -1,0 +1,28 @@
+.MODEL SMALL
+.STACK 100H
+.DATA
+
+BUFFER db ?,?,?,?,?,?,?,"$"
+.CODE
+.STARTUP
+MOV CX, 6
+MOV SI, 0
+input1:    
+MOV AH, 01H
+INT 21H
+MOV BUFFER[SI], AL
+INC SI
+LOOP input1
+MOV CX, 6
+MOV SI, 6
+MOV DX, offset BUFFER
+MOV AH, 09H
+INT 21H
+outputordinato:
+MOV DX, BUFFER[SI]
+MOV AH, 09H
+INT 21H
+SUB SI
+LOOP outputordinato
+
+.EXIT
